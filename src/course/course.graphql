@@ -1,0 +1,13 @@
+type Course {
+  id: Int
+  subject: String
+}
+type Query {
+  courses: [Course]
+  courseById(id: Int!): Course
+}
+type Mutation {
+  addCourse(subject: String): Int
+  removeCourse(id: Int!): Int
+  editCourse(id: Int!, subject: String!): Int
+}
